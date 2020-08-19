@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EXPLORE</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width",initial-scale=1.0>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link href="pic/sports.jfif" rel="icon">
+	<link rel="stylesheet" type="text/css" href="css/more.css">
+</head>
+<body>
+<header>
+	<div class="first">
+		<div class="logo">
+				<img src="pic/sports.jfif">
+			</div>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#" target="_blank">Blog</a></li>
+				<li><a href="#" target="_blank">Shop</a></li>
+				<li><a href="#" target="_blank">About</a></li>
+				<li><a href="contact_page.html">Contact</a></li>
+				<li><a href="#" target="_blank">Log In/Sign Up</a></li>
+			</ul>
+		</div>
+		<div class="title">
+			<h1>Sports World</h1>
+		</div>
+	<div class="listing">
+		<ul>
+			<li>
+				<map name="imagemap">
+	 			<area shape="rect" coords="28,5,180,138" href="https://en.wikipedia.org/wiki/Badminton" alt="badminton" target="myframe"/>
+	 			<area shape="rect" coords="202,17,302,167" href="https://en.wikipedia.org/wiki/Mountaineering" alt="mountaineering" target="myframe"/>
+	 			<area shape="rect" coords="322,27,430,159" href="https://en.wikipedia.org/wiki/Martial_arts" alt="martial art" target="myframe"/>
+	 			<area shape="rect" coords="308,200,446,301" href="https://en.wikipedia.org/wiki/Rowing_(sport)" alt="rowing" target="myframe"/>
+	 			<area shape="rect" coords="28,250,170,381" href="https://en.wikipedia.org/wiki/Cricket" alt="cricket" target="myframe"/>
+	 			<area shape="circle" coords="59,194,37" href="https://en.wikipedia.org/wiki/Football" alt="football" target="myframe"/>
+	 			<area shape="circle" coords="263,372,62" href="https://en.wikipedia.org/wiki/Archery" alt="archery" target="myframe"/>
+	 			</map>
+				<img src="pic/map.png" width="450px" height="450px" usemap="#imagemap">
+			</li>
+			<li>
+				<iframe name="myframe" width="750px" height="450px"></iframe>
+			</li>
+		</ul>
+	</div>
+
+
+	<div class="button">
+			<a href="music.html" class="btn">MUSIC</a>
+			<a href="video.html" class="btn">VIDEO</a>
+	</div>
+
+	<div class="bonus">
+		<h2>Bonus Part :-</h2>
+		<img id="sport" src="pic/stop.png" alt="Motivation" width="0" height="0">
+		<img id="sport1" src="pic/think.jfif" alt="Motivation" width="0" height="0">
+		<img id="sport2" src="pic/act.png" alt="Motivation" width="0" height="0">
+		<img id="sport3" src="pic/canvas.jpg" alt="Motivation" width="0" height="0">
+		<canvas id="myCanvas" width="300" height="250"></canvas>
+		<canvas id="myCanvas1" width="300" height="250"></canvas>
+		<canvas id="myCanvas2" width="300" height="250"></canvas>
+		<canvas id="myCanvas3" width="300" height="250"></canvas>
+		<p><button onclick="myCanvas()">Boost Motivation!</button></p>
+		<h2 id="xml">Active Members and Shoppers</h2>
+		<p><button onclick="loadXMLDoc()">Reveal!</button></p>
+		<table id="demo" border="1">
+			<tr><th>ID</th><th>Member</th><th>Points</th><th>Heirarchy</th></tr>
+		</table>
+		<script>
+		function myCanvas() {
+  			var c = document.getElementById("myCanvas");
+  			var ctx = c.getContext("2d");
+  			var img = document.getElementById("sport");
+  			ctx.drawImage(img,10,10);
+
+  			var c1 = document.getElementById("myCanvas1");
+  			var ctx1 = c1.getContext("2d");
+  			var img1 = document.getElementById("sport1");
+  			ctx1.drawImage(img1,10,10);
+
+  			var c2 = document.getElementById("myCanvas2");
+  			var ctx2 = c2.getContext("2d");
+  			var img2 = document.getElementById("sport2");
+  			ctx2.drawImage(img2,10,10);
+
+  			var c3 = document.getElementById("myCanvas3");
+  			var ctx3 = c3.getContext("2d");
+  			var img3 = document.getElementById("sport3");
+  			ctx3.drawImage(img3,10,10);
+			}
+		function loadXMLDoc(){
+			file = ""
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function(){
+				if(this.readyState == 4 && this.status == 200){
+					myFunction(this);
+				}
+			};
+			xmlhttp.open("GET", file, true);
+			xmlhttp.send();
+			}
+		function myFunction(xml){
+				var x, i, xmlDoc, table;
+				xmlDoc = xml.responseXML;
+				table = "<tr><th>Member</th><th>Points</th><th>Heirarchy</th></tr>";
+				x = xmlDoc.getElementsByTagName("members")
+				for (i=0; i< x.length; i++){
+					table += "<tr><td>" + 
+					x[i].getElementsByTagName("userid")[0].childNodes[0].nodeValue + "</td></td>" + 
+					x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue + "</td></td>" +
+					x[i].getElementsByTagName("points")[0].childNodes[0].nodeValue + "</td></td>" +
+					x[i].getElementsByTagName("hierarchy")[0].childNodes[0].nodeValue + "</td></tr>" ;
+
+				}
+				document.getElementById("demo").innerHTML = table;
+			}
+		</script>	
+	</div>
+</header>
+<footer>
+	<div class="main-content">
+			<div class="left box">
+				<h2>About Us</h2>
+				<div class="content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+					</p>
+					<div class="social">
+						<a href="#"><span class="fab fa-facebook"></span></a>
+						<a href="#"><span class="fab fa-twitter"></span></a>
+						<a href="#"><span class="fab fa-instagram"></span></a>
+						<a href="#"><span class="fab fa-youtube"></span></a>
+					</div>
+				</div>
+			</div>
+			<div class="center box">
+				<h2>Address</h2>
+				<div class="content">
+					<div class="place">
+						<span class="fas fa-map-marker-alt"></span>
+						<span class="text">Kolkata, WB, IN</span>
+					</div>
+					<div class="phone">
+						<span class="fas fa-phone-alt"></span>
+						<span class="text">+91 0000 000 000</span>
+					</div>
+					<div class="email">
+						<span class="fas fa-map-marker-alt"></span>
+						<span class="text">testing@test.com</span>
+					</div>
+
+				</div>
+			</div>
+			<div class="right box">
+				<h2>Contact Us</h2>
+				<div class="content">
+					<form action="#">
+						<div class="email">
+							<div class="text">Email *</div>
+							<input type="email" required>
+						</div>
+						<div class="msg">
+							<div class="text">Message *</div>
+							<textarea name="name" rows="2" cols="25" required></textarea>
+						</div>
+						<div class="butn">
+							<button type="submit">Send</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<center>
+				<span class="credit">Created by Kajal Chatterjee | Sports World</span>
+				<span class="far fa-copyright"></span>
+				<span> 2020 All rights reserved.</span>
+			</center>
+		</div>
+</footer>	
+</body>
+</html>
