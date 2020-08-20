@@ -1,57 +1,22 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <xsl:stylesheet version = "1.0"
    xmlns:xsl = "http://www.w3.org/1999/XSL/Transform">  
-
-
+   <xsl:output method="html"/>
    <xsl:template match = "/">
       <html>
          <head>
             <title>SHOPPERS LIST</title>
-            <link href="pic/sports.jfif" rel="icon">
-            <style>
-
-               *{
-               margin: 0;
-               padding: 0;
-               font-family: Century Gothic;
-               color: white;
-               background-image: linear-gradient(to right bottom, #2980b9, #e056fd);
-               background-size: cover;
-               background-position: center;
-               background-repeat: no-repeat;
-               }
-
-               .show{
-               top: 10%;
-               left: 10%;
-               position: absolute;
-               width: 80%;
-               height: 800px;
-               justify-content: center;
-               text-align: center;
-               }
-
-               .show img{
-               margin-top: 5px;
-               width: 100%;
-               height: 500px;
-               border: 5px solid black;
-               box-sizing: border-box;
-               justify-content: center;
-               text-align: center;
-               object-fit: cover;
-               border-radius: 15px;
-               }
+            <style>*{margin: 0;padding: 0;font-family: Century Gothic; background: #fab1a0;background-repeat: no-repeat}h1{font-size:40px;margin-top:25px}h3{font-size:24px;margin-top:25px;margin-left:50px}img{margin-top: 15px;width: 100%;height: 500px;border: 2px solid black;box-sizing: border-box;justify-content: center;text-align: center;border-radius: 10px;}p{color: black;font-size: 15px;margin-top: 15px}p:hover{background:white}
+            table{margin-top:25px;margin-left:120px;margin-bottom:25px}th{background:#6c5ce7;font-size: 18px}td{background: #fff;color: black;font-size: 16px;text-align:center}td:hover{background: #fdcb6e;color: black;}th:hover{color: white;}
             </style>
          </head>
          <body bgcolor = "#3498db">
-            <div class="show">
-               <img src="background/1.jpg" alt="Girl in a jacket">
-            </div>
-            <h1 align="center">Merchandise Order Updates</h1>
-        
-            <table align="center" border = "1" bgcolor = "white">
-               <tr >
+            <h1 align="center">Sports World</h1>
+            <p align="center">Sports is fun and interesting. If sports is your passion then let's dive into the world of sports.</p>
+            <h3>Merchandise Order Update</h3>
+            <img src="xsl.jfif"/>
+            <table align="center" border = "1" bgcolor = "black">
+               <tr bgcolor = "white">
                   <th>Order No.</th>
                   <th>User ID</th>
                   <th>Member Name</th>
@@ -75,7 +40,7 @@
                      <td><xsl:value-of select = "string(gear)"/></td>
                      <td><xsl:value-of select = "string(item)"/></td>
                      <td><xsl:value-of select = "not(quantity)"/></td>
-                     <td><xsl:value-of select = "ceiling(active_score)"/></td>
+                     <td><xsl:value-of select = "active_score"/></td>
                      <td><xsl:value-of select = "string(orderdate)"/></td>
                      <td><xsl:value-of select = "string(payment)"/></td>                               
                      <td>
