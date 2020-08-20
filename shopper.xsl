@@ -14,7 +14,7 @@
             <h1 align="center">Sports World</h1>
             <p align="center">Sports is fun and interesting. If sports is your passion then let's dive into the world of sports.</p>
             <h3>Merchandise Order Update</h3>
-            <img src="xsl.jfif">
+            <img src="xsl.jfif"/>
             <table align="center" border = "1" bgcolor = "black">
                <tr bgcolor = "white">
                   <th>Order No.</th>
