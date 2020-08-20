@@ -105,13 +105,13 @@
 		function myFunction(xml){
 				var x, i, xmlDoc, table;
 				xmlDoc = xml.responseXML;
-				table = "<tr><th>Member</th><th>Points</th><th>Heirarchy</th></tr>";
-				x = xmlDoc.getElementsByTagName("members")
+				table = "<tr><th>ID</th><th>Member</th><th>Points</th><th>Heirarchy</th></tr>";
+				x = xmlDoc.getElementsByTagName("member")
 				for (i=0; i< x.length; i++){
 					table += "<tr><td>" + 
-					x[i].getElementsByTagName("userid")[0].childNodes[0].nodeValue + "</td></td>" + 
-					x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue + "</td></td>" +
-					x[i].getElementsByTagName("points")[0].childNodes[0].nodeValue + "</td></td>" +
+					x[i].getElementsByTagName("userid")[0].childNodes[0].nodeValue + "</td><td>" + 
+					x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("points")[0].childNodes[0].nodeValue + "</td><td>" +
 					x[i].getElementsByTagName("hierarchy")[0].childNodes[0].nodeValue + "</td></tr>" ;
 
 				}

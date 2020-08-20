@@ -175,10 +175,41 @@ header{
 }
 
 .bonus h2 #xml{
-	margin-top: 20px;
+	margin-top: 40px;
 	left: 50%;
-
 }
+
+.bonus table{
+	position: absolute;
+	width: 1000px;
+	margin-top: 20px;
+	margin-left: 250px;
+	border-radius: 5px;
+	background: #9b59b6;
+	padding: 5px;
+}
+
+.bonus th{
+	font-size: 16px;
+}
+
+.bonus td{
+	background: #fff;
+	padding: 3px 3px 3px 6px;
+	color: black;
+	border-radius: 5px;
+	font-size: 14px;
+	text-align: center;
+}
+
+
+
+.bonus td:hover{
+	background: #e056fd;
+	color:white;
+}
+
+
 
 footer{
 	position: relative;

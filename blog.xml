@@ -36,5 +36,12 @@
 		<points>8</points>
 		<hierarchy>Gold</hierarchy>
 	</member>
+
+	<member id="6">
+		<userid>SW023</userid>
+		<name>Sudeshna</name>
+		<points>9</points>
+		<hierarchy>Platinium</hierarchy>
+	</member>
 </members>
 </blog>
