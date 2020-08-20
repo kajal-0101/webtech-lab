@@ -10,7 +10,7 @@
             table{margin-top:25px;margin-left:120px;margin-bottom:25px}th{background:#6c5ce7;font-size: 18px}td{background: #fff;color: black;font-size: 16px;text-align:center}td:hover{background: #fdcb6e;color: black;}th:hover{color: white;}
             </style>
          </head>
-         <body bgcolor = "#3498db">
+         <body bgcolor ="#3498db">
             <h1 align="center">Sports World</h1>
             <p align="center">Sports is fun and interesting. If sports is your passion then let's dive into the world of sports.</p>
             <h3>Merchandise Order Update</h3>
@@ -40,7 +40,7 @@
                      <td><xsl:value-of select = "string(gear)"/></td>
                      <td><xsl:value-of select = "string(item)"/></td>
                      <td><xsl:value-of select = "not(quantity)"/></td>
-                     <td><xsl:value-of select = "active_score"/></td>
+                     <td><xsl:value-of select = "ceiling(active_score)"/></td>
                      <td><xsl:value-of select = "string(orderdate)"/></td>
                      <td><xsl:value-of select = "string(payment)"/></td>                               
                      <td>
