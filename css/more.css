@@ -45,7 +45,7 @@ header{
 
 .title{
 	position: absolute;
-	top:5%;
+	top: 6%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -67,7 +67,7 @@ header{
 	margin: auto;
 	align-items: center;
 	margin-left: 125px;
-	top: 2%;
+	top: 3%;
 }
 
 .listing ul{
@@ -83,7 +83,7 @@ header{
 
 .button{
 	position: absolute;
-	top: 35%;
+	top: 37%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }

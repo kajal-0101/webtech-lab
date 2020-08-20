@@ -65,7 +65,10 @@
 		<canvas id="myCanvas3" width="300" height="250"></canvas>
 		<p><button onclick="myCanvas()">Boost Motivation!</button></p>
 		<h2 id="xml">Active Members and Shoppers</h2>
-		<p><button onclick="loadXMLDoc()">Reveal!</button></p>
+		<p><button onclick="loadXMLDoc()">Members!</button>
+		<button onclick="loadShoppers()">Shoppers!</button>
+		</p>
+
 		<table id="demo" border="1">
 			<tr><th>ID</th><th>Member</th><th>Points</th><th>Heirarchy</th></tr>
 		</table>
@@ -116,6 +119,14 @@
 
 				}
 				document.getElementById("demo").innerHTML = table;
+			}
+		function loadShoppers(){
+			if (confirm("Do you want to save changes?") == true) {
+			window.location.replace("shopper.xml")
+			} else {
+			alert("Page not replaced!")
+			}
+			
 			}
 		</script>	
 	</div>
