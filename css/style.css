@@ -206,6 +206,36 @@ header{
 	background: white;
 }
 
+#sidebar .check{
+	border-bottom: 1px solid #ecf0f1;
+	margin-top: 15px;
+	color:white;
+}
+
+#sidebar .check:hover{
+	background: white;
+	color: black;
+}
+
+#sidebar .check p{
+	padding: 5px;
+}
+
+#sidebar .check button{
+	margin-left: 15px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	background: white;
+	color: black;
+	width: 170px;
+	height: 50px;
+}
+
+#sidebar .check button:hover{
+	background: red;
+	color: white; 
+}
+
 footer{
 	position: relative;
 	bottom: 0px;
