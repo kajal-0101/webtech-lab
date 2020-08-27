@@ -1,64 +1,145 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+	<title>WALK-IN PAGE</title>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width",initial-scale=1.0>
-	<title>LOG IN/SIGN UP</title>
-	<link href="sports.jfif" rel="icon">
-	<link rel="stylesheet" type="text/css" href="css/ls.css">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel = "stylesheet" href="css/ls.css"/>
+	<link href="pic/sports.jfif" rel="icon"/>
 </head>
 <body>
-	<div class="cont">
-		<div class="form sign-in">
-			<h2>Sign In</h2>
-			<label>
-				<span>Email Adrress</span>
-				<input type="email" name="email" required>
-			</label>
-			<label>
-				<span>Password</span>
-				<input type="password" name="password" required>
-			</label>
-			<button class="submit" type="button">Sign In</button>
-			<p class="forgot">Forgot Password?</p>
-		</div>
-		<div class="sub-cont">
-			<div class="img">
-				<div class="img-text m-up">
-					<h2>New Here?</h2>
-					<p>Sign Up for more adventure!</p>
-				</div>
-				<div class="img-text m-in">
-					<h2>Already an adventurer?</h2>
-					<p>why so worry, simple sign in!</p>
-				</div>
-				<div class="img-btn">
-					<span class="m-up">Sign Up</span>
-					<span class="m-in">Sign In</span>
-				</div>
+	<div class="first">
+		<div class="logo">
+				<img src="pic/sports.jfif">
 			</div>
-			<div class="form sign-up">
-				<h2>Sign Up</h2>
-				<label>
-					<span>Name</span>
-					<input type="text">
-				</label>
-				<label>
-					<span>Email</span>
-					<input type="email">
-				</label>
-				<label>
-					<span>Password</span> 
-					<input type="password">
-				</label>
-				<label>
-					<span>Confirm Password</span>
-					<input type="password">
-				</label>
-				<button type="button" class="submit">Sign Up Now</button>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#" target="_blank">Blog</a></li>
+				<li><a href="#" target="_blank">Shop</a></li>
+				<li><a href="#" target="_blank">About</a></li>
+				<li><a href="contact_page.html">Contact</a></li>
+			</ul>
+	</div>
+	<div class="title">
+			<h1>Sports World</h1>
+			<p>Sports is fun and interesting. If sports is your passion then let's dive into the world of sports.</p>
+		</div>
+	<header>
+	<div class="container" id="container">
+		<div class="form-container sign-up-container">
+			<form action="#">
+				<h1>Join Sports World</h1>
+				<div class="social-container">
+					<a href="#" class="social"><i class="fab fa-facebook"></i></a>
+					<a href="#" class="social"><i class="fab fa-instagram"></i></a>
+					<a href="#" class="social"><i class="fab fa-google"></i></a>
+				</div>
+				<span>use your credentials</span>
+				<input type="text" name="name" placeholder="Email/Phone No.">
+				<input type="password" name="password1" placeholder="Password">
+				<span>* must start with alphabet, have 8 characters, numeric, underscore allowed!</span>
+				<input type="password" name= "password2" placeholder="Confirm Password">
+				<button name="submit" onclick="CheckPassword(form)">Sign Up</button>
+			</form>
+		</div>
+		<div class="form-container sign-in-container">
+			<form action="#">
+				<h1>Welcome Back</h1>
+				<div class="social-container">
+					<a href="#" class="social"><i class="fab fa-facebook"></i></a>
+					<a href="#" class="social"><i class="fab fa-instagram"></i></a>
+					<a href="#" class="social"><i class="fab fa-google"></i></a>
+				</div>
+				<span>use your credentials</span>
+				<input type="text" name="uname" placeholder="Username">
+				<input type="password" name="password" placeholder="Password">
+				<a href="#">Forgot your password?</a>
+				<button name="in" onclick="Entry(form)">Sign In</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1>Welcome Back!</h1>
+					<p>
+						Get back to the passionate world of sports!
+					</p>
+					<button class="ghost" id="signIn">Sign In</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1>Hey Buddy!</h1>
+					<p>
+						Dive into the passionate world of sports!
+					</p>
+					<button class="ghost" id="signUp">Sign Up</button>
+				</div>
 			</div>
 		</div>
 	</div>
+	</header>
+	<footer>
+		<div class="main-content">
+			<div class="left box">
+				<h2>About Us</h2>
+				<div class="content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+					</p>
+					<div class="social">
+						<a href="#"><span class="fab fa-facebook"></span></a>
+						<a href="#"><span class="fab fa-twitter"></span></a>
+						<a href="#"><span class="fab fa-instagram"></span></a>
+						<a href="#"><span class="fab fa-youtube"></span></a>
+					</div>
+				</div>
+			</div>
+			<div class="center box">
+				<h2>Address</h2>
+				<div class="content">
+					<div class="place">
+						<span class="fas fa-map-marker-alt"></span>
+						<span class="text">Kolkata, WB, IN</span>
+					</div>
+					<div class="phone">
+						<span class="fas fa-phone-alt"></span>
+						<span class="text">+91 0000 000 000</span>
+					</div>
+					<div class="email">
+						<span class="fas fa-map-marker-alt"></span>
+						<span class="text">testing@test.com</span>
+					</div>
+
+				</div>
+			</div>
+			<div class="right box">
+				<h2>Contact Us</h2>
+				<div class="content">
+					<form action="#">
+						<div class="email">
+							<div class="text">Email *</div>
+							<input type="email" required>
+						</div>
+						<div class="msg">
+							<div class="text">Message *</div>
+							<textarea name="name" rows="2" cols="25" required></textarea>
+						</div>
+						<div class="butn">
+							<button type="submit">Send</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<center>
+				<span class="credit">Created by Kajal Chatterjee | Sports World</span>
+				<span class="far fa-copyright"></span>
+				<span> 2020 All rights reserved.</span>
+			</center>
+		</div>
+</footer>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
