@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+
+<!DOCTYPE merchandise
+[
+<!ELEMENT merchandise (userid, phone, email, address, pincode, city, state, country, sport, gear, merchandise, quantity, orderdate, payment)>
+<!ELEMENT userid (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT pincode (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT sport (#PCDATA)>
+<!ELEMENT gear (#PCDATA)>
+<!ELEMENT merchandise (#PCDATA)>
+<!ELEMENT quantity (#PCDATA)>
+<!ELEMENT orderdate (#PCDATA)>
+<!ELEMENT payment (#PCDATA)>
+]>
+
+<merchandise>
+	<userid>SW001</userid>
+	<phone>9831256576</phone>
+	<email>kajalkayachatterjee@gmail.com</email>
+	<address>Lake Gardens</address>
+	<pincode>700033</pincode>
+	<city>Kolkata</city>
+	<state>West Bengal</state>
+	<country>India</country>
+	<sport>Rowing</sport>
+	<gear>Team</gear>
+	<merchandise>Sweatshirt</merchandise>
+	<quantity>8</quantity>
+	<orderdate>02-08-2020</orderdate>
+	<payment>UPI</payment>
+</merchandise>

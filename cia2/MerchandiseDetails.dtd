@@ -1,0 +1,16 @@
+<!DOCTYPE merchandise
+[
+<!ELEMENT merchandise(order) *>
+<!ELEMENT order (userid, phone, email, address, pincode, city, state, country, sport, gear, merchandise, quantity, orderdate, payment)>
+<!ELEMENT userid (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT state (#PCDATA)>
+<!ELEMENT sport (#PCDATA)>
+<!ELEMENT gear (#PCDATA)>
+<!ELEMENT item (#PCDATA)>
+<!ELEMENT quantity (#PCDATA)>
+<!Element active_score (#PCDATA)>
+<!ELEMENT orderdate (#PCDATA)>
+<!ELEMENT payment (#PCDATA)>
+]>

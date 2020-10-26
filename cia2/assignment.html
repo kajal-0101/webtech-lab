@@ -1,0 +1,87 @@
+<!DOCTYPE html>  
+<html>
+<head>
+  <title>Assignment</title>
+</head>  
+<body>  
+<h1 align="center">XPath</h1>  
+<div>  
+  <h3>1. Accessing nodes by specifying the Node Location</h3> 
+  <p>Path Expression: /merchandise/order/name</p>
+  <p id="first"></p>
+  <h3>2. Accessing nodes by specifying the Node type</h3> 
+  <p>Path Expression: //userid[@*]</p>
+  <p id="second"></p>
+  <h3>3. Accessing nodes by specifying the Predicates</h3> 
+  <p>Path Expression: /merchandise/order[position()<3]/*</p>
+  <p id="third"></p>
+  <h3>4. Node set Functions</h3> 
+  <p>Path Expression: /merchandise/order[last()]/*</p>
+  <p id="fourth"></p>
+
+</div>  
+<script>  
+var txt = "";
+if (window.XMLHttpRequest)  
+  {// code for IE7+, Firefox, Chrome, Opera, Safari  
+      xmlhttp=new XMLHttpRequest();  
+  }  
+else  
+  {// code for IE6, IE5  
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
+  }  
+xmlhttp.open("GET","external.xml",false);  
+xmlhttp.send();  
+xml = xmlhttp.responseXML;  
+
+//Accessing By Node Location
+var path = "/merchandise/order/name";  
+var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+var result = nodes.iterateNext();
+while (result) {
+    txt += result.childNodes[0].nodeValue + "<br>";
+    result = nodes.iterateNext();  
+}
+document.getElementById("first").innerHTML = txt;
+
+//Accessing By Node Type
+var path = "//userid[@*]";  
+txt = "";
+var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+var result = nodes.iterateNext();
+while (result) {
+    txt += result.childNodes[0].nodeValue + "<br>";
+    result = nodes.iterateNext();  
+}
+document.getElementById("second").innerHTML = txt;
+
+//Accessing By Predicate
+var path = "/merchandise/order[position()<3]/*";  
+txt = "";
+var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+var result = nodes.iterateNext();
+while (result) {
+    txt += result.childNodes[0].nodeValue + "<br>";
+    result = nodes.iterateNext();  
+}
+document.getElementById("third").innerHTML = txt;
+
+
+//Accessing By Node Set Function
+var path = "/merchandise/order[last()]/*";  
+txt = "";
+var nodes = xml.evaluate(path, xml, null, XPathResult.ANY_TYPE, null);
+var result = nodes.iterateNext();
+while (result) {
+    txt += result.childNodes[0].nodeValue + "<br>";
+    result = nodes.iterateNext();  
+}
+document.getElementById("fourth").innerHTML = txt;
+
+
+
+</script>  
+</body>  
+</html>   
+
+ 
